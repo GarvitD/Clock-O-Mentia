@@ -1,6 +1,6 @@
-One of our team members who had to design the api for the ML model has been admitted to hospital so we weren't able to integrate the app and ML model so we are providing the link to the kaggle notebook for the ML implementation : 
+One of our team members who had to design the api for the ML model has been admitted to hospital so we weren't able to integrate the app and ML model so we are providing the link to the kaggle notebook for the ML implementation and github link for the data collection and pre processing code: 
 https://www.kaggle.com/code/neerajanandcoder/fork-of-train-cassava-template-812f2a-686359
-
+https://github.com/neerajanand321/Hackfest
 
 
 #Doctor Side Implementation
