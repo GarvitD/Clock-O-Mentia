@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.clock_o_mentia">
+    package="com.example.clock_o_mentia" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -12,7 +12,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ClockOMentia">
+        android:theme="@style/Theme.ClockOMentia" >
+        <activity
+            android:name=".Patient.Activities.DoPatientTest"
+            android:exported="false" />
         <activity
             android:name=".Doctor.Activity.Doctor_Login"
             android:exported="false" />
@@ -31,7 +34,7 @@
             android:value="AIzaSyBN7-mirDtMbCn8os8sYPEF3lg_w3Rrr6k" />
 
         <activity
-            android:name=".Patient.Activities.Patient_Login"
+            android:name=".Patient.Activities.NearbyDoctors"
             android:exported="false" />
         <activity
             android:name=".Patient.Activities.Patient_Signup"
@@ -46,8 +49,8 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Patient.Activities.NearbyDoctors"
-            android:exported="true">
+            android:name=".Patient.Activities.Patient_Login"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

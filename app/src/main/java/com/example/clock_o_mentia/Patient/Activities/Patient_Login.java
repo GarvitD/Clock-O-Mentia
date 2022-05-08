@@ -113,6 +113,9 @@ public class Patient_Login extends AppCompatActivity {
     private void checkpassword(String password) {
         if(password.equalsIgnoreCase(binding.patientPassword.getText().toString())) {
             Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(Patient_Login.this, NearbyDoctors.class);
+            startActivity(intent);
+            finish();
         } else {
             binding.patientPassword.requestFocus();
             binding.patientPassword.setError("Password is Incorrect!");
@@ -157,6 +160,9 @@ public class Patient_Login extends AppCompatActivity {
                             Toast.makeText(Patient_Login.this, "Sign In Success", Toast.LENGTH_SHORT).show();
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            Intent intent = new Intent(Patient_Login.this,NearbyDoctors.class);
+                            startActivity(intent);
+                            finish();
                         } else {
                             Toast.makeText(Patient_Login.this, "failed", Toast.LENGTH_SHORT).show();
                             // If sign in fails, display a message to the user.

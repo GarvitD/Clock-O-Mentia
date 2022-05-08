@@ -122,6 +122,9 @@ public class DoctorProfileSetup extends AppCompatActivity {
                             @Override
                             public void onSuccess(DocumentReference documentReference) {
                                 Toast.makeText(DoctorProfileSetup.this, "Success", Toast.LENGTH_SHORT).show();
+                                Intent intent;
+                                intent = new Intent(DoctorProfileSetup.this, DoctorMainActivity.class);
+                                startActivity(intent);
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
@@ -178,7 +181,7 @@ public class DoctorProfileSetup extends AppCompatActivity {
                                     .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                                         @Override
                                         public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
-
+                                            Toast.makeText(DoctorProfileSetup.this, "Please wait for upload to get over", Toast.LENGTH_SHORT).show();
                                         }
                                     });
                         }
@@ -192,7 +195,7 @@ public class DoctorProfileSetup extends AppCompatActivity {
                     .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
-
+                            Toast.makeText(DoctorProfileSetup.this, "Please wait for upload to get over", Toast.LENGTH_SHORT).show();
                         }
                     });
         } else {
