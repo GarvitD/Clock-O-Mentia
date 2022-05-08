@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Doctor.Activity.Doctor_Signup"
+    android:orientation="vertical"
+    android:background="@color/prime">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:src="@drawable/doctors_bg_img"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/signup_rounded_bg"
+        android:elevation="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textColor="@color/new_black"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            />
+
+        <EditText
+            android:id="@+id/doctor_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_bg"
+            android:hint="First Name"
+            android:padding="10dp"
+            android:paddingStart="19dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColorHint="@color/prime"
+            android:textColor="@color/prime"
+
+            />
+
+        <EditText
+            android:id="@+id/doctor_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_bg"
+            android:hint="Last Name"
+            android:padding="10dp"
+            android:paddingStart="19dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColorHint="@color/prime"
+            android:textColor="@color/prime"
+
+            />
+
+        <EditText
+            android:id="@+id/doctor_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_bg"
+            android:hint="Email Address"
+            android:padding="10dp"
+            android:paddingStart="19dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/prime"
+            />
+
+        <EditText
+            android:id="@+id/doctor_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_bg"
+            android:hint="Password"
+            android:padding="10dp"
+            android:paddingStart="19dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/prime"
+            android:textColor="@color/prime"
+
+            />
+
+        <EditText
+            android:id="@+id/doctor_password_cnf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_bg"
+            android:hint="Confirm Password"
+            android:padding="10dp"
+            android:paddingStart="19dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/prime"
+            android:textColor="@color/prime"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/doctor_signup_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/gradient_rounded_bg"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="25dp"
+                android:text="Already Registered?"
+                android:textColor="#2b2a2a"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/toDoctorLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textSize="20sp"
+                android:textColor="#2daae4"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

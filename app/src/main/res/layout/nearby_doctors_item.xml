@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="75dp"
+        android:elevation="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardUseCompatPadding="false"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:background="#ffffff">
+            <androidx.cardview.widget.CardView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cardCornerRadius="50dp"
+                android:layout_marginTop="2dp"
+                android:id="@+id/image"
+                android:layout_marginLeft="20dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_profile_img"
+                    android:id="@+id/imageview1">
+
+                </ImageView>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                app:layout_constraintLeft_toRightOf="@+id/image"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/textview"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="#2daae4"
+                android:text="Shirsh"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                app:layout_constraintLeft_toRightOf="@+id/image"
+                app:layout_constraintTop_toBottomOf="@+id/textview"
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/image"
+                android:layout_above="@+id/textview2"
+                android:layout_alignStart="@+id/textview"
+                android:text="anything"
+                android:textColor="#000000"
+
+                android:textSize="20sp" />
+
+
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                android:id="@+id/textview2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true"
+                android:text="Shirsh Garg"
+                android:textColor="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="20sp"
+                android:background="#2daae4"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+
