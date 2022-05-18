@@ -10,5 +10,8 @@
     <color name="prime">#2daae4</color>
     <color name="new_black">#2b2a2a</color>
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#2daae4</color>
-
+    <color name="bg_color">#f4f4f4</color>
+    <color name="dark_blue">#304ffe</color>
+    <color name="dark_grey">#9c9c9c</color>
+    <color name="light_grey">#f4f4f4</color>
 </resources>

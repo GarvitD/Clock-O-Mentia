@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -90,6 +91,14 @@ public class Patient_Signup extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
+                        SharedPreferences sharedPreferences = getSharedPreferences("patientEmail",MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("email",binding.patientUserSignup.getText().toString());
+                        editor.apply();
+
+                        Intent intent = new Intent(Patient_Signup.this,NearbyDoctors.class);
+                        startActivity(intent);
+                        finish();
                         Toast.makeText(Patient_Signup.this, "success", Toast.LENGTH_SHORT).show();
                     }
                 })

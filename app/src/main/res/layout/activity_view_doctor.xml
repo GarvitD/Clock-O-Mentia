@@ -4,51 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Patient.Activities.ViewDoctor">
+    tools:context=".Patient.Activities.ViewDoctor"
+    android:background="@color/bg_color">
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:id="@+id/dcotrorProfilePhoto"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:src="@drawable/default_profile_img"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.021" />
+
+    <ImageView
+        android:id="@+id/doctorCertificate"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/info_icon"
+        app:layout_constraintBottom_toTopOf="@+id/doctorGender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toEndOf="@+id/doctorName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.612" />
 
     <TextView
         android:id="@+id/doctorName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:autoSizeMaxTextSize="22sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
+        android:maxLength="16"
         android:text="Name"
         android:textColor="@color/new_black"
-        android:textSize="30sp"
         android:textStyle="bold"
-        android:maxLength="16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toEndOf="@+id/dcotrorProfilePhoto"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.019" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <TextView
         android:id="@+id/doctorAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:text="10 Yrs"
+        android:textColor="@color/new_black"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toEndOf="@+id/dcotrorProfilePhoto"
         app:layout_constraintTop_toBottomOf="@+id/doctorName"
-        app:layout_constraintVertical_bias="0.016" />
-
+        app:layout_constraintVertical_bias="0.015" />
 
     <TextView
         android:id="@+id/doctorGender"
@@ -56,6 +70,7 @@
         android:layout_height="wrap_content"
         android:text="Male"
         android:textSize="22sp"
+        android:textColor="@color/new_black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
@@ -64,88 +79,129 @@
         app:layout_constraintVertical_bias="0.016" />
 
     <ImageView
+        android:id="@+id/imageView8"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="20dp"
         android:src="@drawable/ic_baseline_phone_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/doctorNumber"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/dcotrorProfilePhoto"
         app:layout_constraintTop_toBottomOf="@+id/doctorAge"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.019" />
 
     <TextView
         android:id="@+id/doctorNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
         android:text="1111111111"
+        android:textColor="@color/new_black"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.543"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toBottomOf="@+id/doctorAge"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.019" />
 
     <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@drawable/ic_baseline_email_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintTop_toBottomOf="@+id/dcotrorProfilePhoto"
+        app:layout_constraintVertical_bias="0.02" />
 
     <TextView
         android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="abcd@gmail.com"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.044" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/google_map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_height="250dp"
+        android:autoSizeMaxTextSize="22sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
+        android:text="abcd@gmail.com"
+        android:textColor="@color/new_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/dcotrorProfilePhoto"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.439"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email"
-        app:layout_constraintVertical_bias="0.093" />
+        app:layout_constraintVertical_bias="0.19">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/google_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.079" />
+
+    </androidx.cardview.widget.CardView>
 
     <RatingBar
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginTop="30dp"
         android:rating="3.5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        app:layout_constraintVertical_bias="0.902" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bookAppointment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
+        android:height="0dp"
         android:background="@drawable/gradient_rounded_bg"
         android:text="Book Appointment"
         android:textAllCaps="false"
@@ -153,9 +209,12 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar"
-        app:layout_constraintVertical_bias="0.313" />
+        app:layout_constraintVertical_bias="0.0"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.clock_o_mentia.Patient.Models;
+package com.example.clock_o_mentia.Doctor.Models;
 
 public class DoctorModel {
 
@@ -11,12 +11,13 @@ public class DoctorModel {
     private String gender;
     private String cerificate_link;
     private String profilePhoto_link;
+    private boolean isVerified;
 
     public DoctorModel() {
 
     }
 
-    public DoctorModel(String name, Integer age, String email, String phoneNum, double latitude, double longitude, String gender, String cerificate_link, String profilePhoto_link) {
+    public DoctorModel(String name, Integer age, String email, String phoneNum, double latitude, double longitude, String gender, String cerificate_link, String profilePhoto_link, boolean isVerified) {
         this.name = name;
         this.age = age;
         this.email = email;
@@ -26,6 +27,7 @@ public class DoctorModel {
         this.gender = gender;
         this.cerificate_link = cerificate_link;
         this.profilePhoto_link = profilePhoto_link;
+        this.isVerified = isVerified;
     }
 
     public String getName() {
@@ -46,6 +48,14 @@ public class DoctorModel {
 
     public String getEmail() {
         return email;
+    }
+
+    public boolean isVerified() {
+        return isVerified;
+    }
+
+    public void setVerified(boolean verified) {
+        isVerified = verified;
     }
 
     public void setEmail(String email) {

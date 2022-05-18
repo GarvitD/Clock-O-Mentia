@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,7 +19,6 @@ import android.widget.Toast;
 
 import com.example.clock_o_mentia.Doctor.Activity.Doctor_Login;
 import com.example.clock_o_mentia.R;
-import com.example.clock_o_mentia.databinding.ActivityDoctorLoginBinding;
 import com.example.clock_o_mentia.databinding.ActivityPatientLoginBinding;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -112,6 +112,10 @@ public class Patient_Login extends AppCompatActivity {
     }
     private void checkpassword(String password) {
         if(password.equalsIgnoreCase(binding.patientPassword.getText().toString())) {
+            SharedPreferences sharedPreferences = getSharedPreferences("patientEmail",MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("email",binding.patientUsername.getText().toString());
+            editor.apply();
             Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(Patient_Login.this, NearbyDoctors.class);
             startActivity(intent);
@@ -157,10 +161,14 @@ public class Patient_Login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            SharedPreferences sharedPreferences = getSharedPreferences("patientEmail",MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putString("email",FirebaseAuth.getInstance().getCurrentUser().getEmail());
+                            editor.apply();
                             Toast.makeText(Patient_Login.this, "Sign In Success", Toast.LENGTH_SHORT).show();
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent intent = new Intent(Patient_Login.this,NearbyDoctors.class);
+                            Intent intent = new Intent(Patient_Login.this, NearbyDoctors.class);
                             startActivity(intent);
                             finish();
                         } else {

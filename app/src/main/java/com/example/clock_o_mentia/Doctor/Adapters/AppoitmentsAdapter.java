@@ -15,8 +15,10 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
 public class AppoitmentsAdapter extends FirestoreRecyclerAdapter<AppointmentModel,AppoitmentsAdapter.AppointmentViewHolder> {
 
-    public AppoitmentsAdapter(@NonNull FirestoreRecyclerOptions<AppointmentModel> options) {
+    OnItemClick onItemClick;
+    public AppoitmentsAdapter(@NonNull FirestoreRecyclerOptions<AppointmentModel> options, OnItemClick onItemClick) {
         super(options);
+        this.onItemClick = onItemClick;
     }
 
     @Override
@@ -40,6 +42,17 @@ public class AppoitmentsAdapter extends FirestoreRecyclerAdapter<AppointmentMode
 
             name = itemView.findViewById(R.id.name);
             dateTime = itemView.findViewById(R.id.dateTime);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onItemClick.itemClick(getItem(getAbsoluteAdapterPosition()),getAbsoluteAdapterPosition());
+                }
+            });
         }
+    }
+
+    public interface OnItemClick {
+        void itemClick(AppointmentModel appointmentModel,int position);
     }
 }

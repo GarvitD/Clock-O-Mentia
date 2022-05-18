@@ -8,14 +8,11 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.clock_o_mentia.R;
-
-import java.util.ArrayList;
 
 public class DoPatientTest extends AppCompatActivity {
 

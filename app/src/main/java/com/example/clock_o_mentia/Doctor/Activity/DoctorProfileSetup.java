@@ -16,7 +16,7 @@ import android.webkit.MimeTypeMap;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
-import com.example.clock_o_mentia.Patient.Models.DoctorModel;
+import com.example.clock_o_mentia.Doctor.Models.DoctorModel;
 import com.example.clock_o_mentia.R;
 import com.example.clock_o_mentia.databinding.ActivityDoctorProfileSetupBinding;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -72,7 +72,6 @@ public class DoctorProfileSetup extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         updateUI();
 
-        doctor = new DoctorModel();
 
         binding.certiImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,24 +99,9 @@ public class DoctorProfileSetup extends AppCompatActivity {
         binding.doctorSaveDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                doctor.setName(binding.doctorName.getText().toString());
-                doctor.setAge(Integer.parseInt(binding.doctorAge.getText().toString()));
-                doctor.setEmail(binding.doctorEmail.getText().toString());
-                doctor.setGender(binding.genderOptions.getText().toString());
-                doctor.setPhoneNum(binding.doctorPhone.getText().toString().trim());
                 setLatLong();
 
-                DoctorModel doctorModel = new DoctorModel(binding.doctorName.getText().toString(),
-                        Integer.parseInt(binding.doctorAge.getText().toString()),
-                        binding.doctorEmail.getText().toString(),
-                        binding.doctorPhone.getText().toString().trim(),
-                        latitude,
-                        longitude,
-                        binding.genderOptions.getText().toString(),
-                        certificate_link,
-                        profile_link);
-
-                firestoreRef.add(doctorModel)
+                firestoreRef.add(doctor)
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                             @Override
                             public void onSuccess(DocumentReference documentReference) {
@@ -166,8 +150,6 @@ public class DoctorProfileSetup extends AppCompatActivity {
                                                 @Override
                                                 public void onSuccess(Uri uri) {
                                                     profile_link = uri.toString();
-                                                    doctor.setProfilePhoto_link(profile_link);
-                                                    doctor.setCerificate_link(certificate_link);
                                                 }
                                             });
                                         }
@@ -249,16 +231,23 @@ public class DoctorProfileSetup extends AppCompatActivity {
 
     private void setLatLong() {
         Geocoder geocoder = new Geocoder(DoctorProfileSetup.this);
-        List<Address> addressList;
 
         try {
-            addressList = geocoder.getFromLocationName(binding.addressInput.getText().toString(),1);
+            List<Address> addressList = geocoder.getFromLocationName(binding.addressInput.getText().toString(),1);
             if (addressList != null) {
                 latitude = addressList.get(0).getLatitude();
                 longitude = addressList.get(0).getLongitude();
 
-                doctor.setLatitude(latitude);
-                doctor.setLongitude(longitude);
+                doctor = new DoctorModel(binding.doctorName.getText().toString(),
+                        Integer.parseInt(binding.doctorAge.getText().toString()),
+                        binding.doctorEmail.getText().toString(),
+                        binding.doctorPhone.getText().toString().trim(),
+                        latitude,
+                        longitude,
+                        binding.genderOptions.getText().toString(),
+                        certificate_link,
+                        profile_link,
+                        false);
             }
         } catch (IOException e) {
             Toast.makeText(DoctorProfileSetup.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();

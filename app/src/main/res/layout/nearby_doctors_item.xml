@@ -1,85 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="75dp"
         android:elevation="10dp"
-        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="@color/prime"
+        app:cardCornerRadius="20dp"
         app:cardUseCompatPadding="false"
-        >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="95dp"
-            android:background="#ffffff">
+            android:layout_height="wrap_content">
+
             <androidx.cardview.widget.CardView
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/image"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                app:cardCornerRadius="50dp"
-                android:layout_marginTop="2dp"
-                android:id="@+id/image"
-                android:layout_marginLeft="20dp">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:id="@+id/doctor_profile_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/default_profile_img"
-                    android:id="@+id/imageview1">
+                    android:src="@drawable/default_profile_img">
 
                 </ImageView>
+
             </androidx.cardview.widget.CardView>
 
             <TextView
-                app:layout_constraintLeft_toRightOf="@+id/image"
-                app:layout_constraintTop_toTopOf="parent"
-                android:id="@+id/textview"
+                android:id="@+id/doctor_item_name"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="2dp"
-                android:background="#2daae4"
+                android:layout_marginTop="10dp"
                 android:text="Shirsh"
                 android:textColor="#ffffff"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/doctor_item_phoneNum"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.079"
+                app:layout_constraintStart_toEndOf="@+id/image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
-                app:layout_constraintLeft_toRightOf="@+id/image"
-                app:layout_constraintTop_toBottomOf="@+id/textview"
-                android:id="@+id/distance"
+                android:id="@+id/doctor_item_distance"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="2dp"
-                android:layout_toRightOf="@+id/image"
-                android:layout_above="@+id/textview2"
-                android:layout_alignStart="@+id/textview"
+                android:layout_above="@+id/doctor_item_phoneNum"
+                android:layout_alignStart="@+id/doctor_item_name"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
                 android:text="anything"
-                android:textColor="#000000"
-
-                android:textSize="20sp" />
-
-
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.004"
+                app:layout_constraintStart_toEndOf="@+id/image"
+                app:layout_constraintTop_toBottomOf="@+id/doctor_item_name"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
-                app:layout_constraintTop_toBottomOf="@+id/image"
-                android:id="@+id/textview2"
+                android:id="@+id/doctor_item_phoneNum"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
                 android:text="Shirsh Garg"
-                android:textColor="#ffffff"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/white"
                 android:textSize="20sp"
-                android:background="#2daae4"/>
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                app:layout_constraintVertical_bias="0.0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 

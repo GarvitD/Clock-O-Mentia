@@ -3,30 +3,47 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.123" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/border_bg.xml" value="0.123" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/bottom_right_rounded.xml" value="0.123" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/google_logo.xml" value="0.1305" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/gradient_rounded_bg.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/ic_baseline_calendar_today_24.xml" value="0.1" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/ic_baseline_camera_24.xml" value="0.123" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/ic_baseline_cloud_upload_24.xml" value="0.123" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/ic_baseline_description_24.xml" value="0.132" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/ic_baseline_file_upload_24.xml" value="0.123" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1305" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.1" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/ic_baseline_looks_one_24.xml" value="0.123" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.1" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/ic_error_fill0_wght400_grad0_opsz48.xml" value="0.123" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/ic_outline_info_24.xml" value="0.123" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/ic_outline_videocam_24.xml" value="0.123" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/ic_round_insert_drive_file_24.xml" value="0.123" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/quater_circle.xml" value="0.1305" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/rounded_bg.xml" value="0.1305" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/drawable/signup_rounded_bg.xml" value="0.1305" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout-v26/activity_view_doctor.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_book_appointment.xml" value="0.22" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_do_patient_test.xml" value="0.144017094017094" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_doctor_login.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_doctor_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_doctor_main.xml" value="0.22" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_doctor_profile_setup.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_doctor_signup.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_nearby_doctors.xml" value="0.13247863247863248" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_nearby_doctors.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_pat_my_appointments.xml" value="0.144017094017094" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_patient_login.xml" value="0.22" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_patient_signup.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_view_doctor.xml" value="0.22" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_show_appointment.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_view_appointment.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/activity_view_doctor.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/appointment_item.xml" value="0.22" />
         <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/dropdown_item.xml" value="0.1" />
-        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/nearby_doctors_item.xml" value="0.144017094017094" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/nearby_doctors_item.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/layout/pat_appointment_item.xml" value="0.14316239316239315" />
+        <entry key="..\:/Users/garvi/AndroidStudioProjects/ClockOMentia/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -17,7 +17,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.clock_o_mentia.MainActivity;
 import com.example.clock_o_mentia.Patient.Activities.Patient_Login;
 import com.example.clock_o_mentia.R;
 import com.example.clock_o_mentia.databinding.ActivityDoctorLoginBinding;
@@ -27,11 +26,12 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -160,9 +160,34 @@ public class Doctor_Login extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(Doctor_Login.this, "Sign In Success", Toast.LENGTH_SHORT).show();
                             Log.d(TAG, "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                            String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+                            Log.i("emailId",email);
 
-                            checkFirstLogin(task);
+                            Query query = FirebaseFirestore.getInstance().collection("doctors_info").whereEqualTo("email",email).limit(1);
+                            query.get()
+                                            .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                                @Override
+                                                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                                    Intent intent;
+                                                    if(queryDocumentSnapshots.getDocuments().size() != 0) {
+                                                        intent = new Intent(Doctor_Login.this, DoctorMainActivity.class);
+                                                        SharedPreferences sharedPreferences = getSharedPreferences("DoctorEmail",MODE_PRIVATE);
+                                                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                                                        editor.putString("email",email);
+                                                        editor.apply();
+                                                    } else {
+                                                        intent = new Intent(Doctor_Login.this, DoctorProfileSetup.class);
+                                                    }
+                                                    startActivity(intent);
+                                                    finish();
+                                                }
+                                            })
+                                                    .addOnFailureListener(new OnFailureListener() {
+                                                        @Override
+                                                        public void onFailure(@NonNull Exception e) {
+                                                            Toast.makeText(Doctor_Login.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    });
                         } else {
                             Toast.makeText(Doctor_Login.this, "failed", Toast.LENGTH_SHORT).show();
                             // If sign in fails, display a message to the user.
@@ -172,21 +197,5 @@ public class Doctor_Login extends AppCompatActivity {
                         // ...
                     }
                 });
-    }
-
-    private void checkFirstLogin(Task<AuthResult> task) {
-        boolean isNew = task.getResult().getAdditionalUserInfo().isNewUser();
-        Intent intent;
-        if(isNew) {
-            intent = new Intent(Doctor_Login.this, DoctorProfileSetup.class);
-        } else {
-            intent = new Intent(Doctor_Login.this, DoctorMainActivity.class);
-            SharedPreferences sharedPreferences = getSharedPreferences("DoctorEmail",MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString("email",mAuth.getCurrentUser().getEmail());
-            editor.apply();
-        }
-        startActivity(intent);
-        finish();
     }
 }
