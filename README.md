@@ -1,11 +1,11 @@
-One of our team members who had to design the api for the ML model has been admitted to hospital so we weren't able to integrate the app and ML model so we are providing the link to the kaggle notebook for the ML implementation and github link for the data collection and pre processing code: 
+link to the kaggle notebook for the ML implementation and github link for the data collection and pre processing code: 
 https://www.kaggle.com/code/neerajanandcoder/fork-of-train-cassava-template-812f2a-686359
 https://github.com/neerajanand321/Hackfest
 
 
 #Doctor Side Implementation
 
--> All doctors will be required to sign up on using the app for the first     time.
+-> All doctors will be required to sign up on using the app for the first time.
 
 -> The sign up can be from an Email Id and password or through Google sign up
 
@@ -21,5 +21,7 @@ https://github.com/neerajanand321/Hackfest
 
 -> The patient will have to upload the image of the clock drawn and app will predict whether the person has dementia or not.
 
--> The patient can book an appointment with the concerned doctor by providing his details and the date and time of appointment
+-> The patient can book an appointment with the concerned doctor by providing his details and the date and time of appointment.
+
+-> The patient can also schedule an in app video call as well with the doctor for further assistance.
 
